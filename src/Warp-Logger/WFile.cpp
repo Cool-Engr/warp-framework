@@ -61,20 +61,20 @@ std::vector<std::string> WFile::ReadAllLines(std::string file)
 	return retv;
 }
 
-// int WFile::WriteAllLines(std::string file, std::vector<std::string> vecstr)
-// {
-// 	std::ofstream f;
-// 	f.open(file);
+int WFile::WriteAllLines(std::string file, std::vector<std::string> vecstr)
+{
+	std::ofstream f;
+	f.open(file);
 
-// 	for (size_t i = 0; i < vecstr.size(); i++)
-// 	{
-// 		f << vecstr[i];
-// 		f << std::endl;
-// 	}
+	for (size_t i = 0; i < vecstr.size(); i++)
+	{
+		f << vecstr[i];
+		f << std::endl;
+	}
 
-// 	f.close();
-// 	return 0;
-// }
+	f.close();
+	return 0;
+}
 
 std::vector<int32_t> WFile::FindAll(std::string file, std::string val)
 {
